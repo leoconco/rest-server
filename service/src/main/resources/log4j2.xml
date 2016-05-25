@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="WARN">
+    <Appenders>
+        <File name="coloso" fileName="target/logs/rest.log">
+            <JsonLayout />
+        </File>
+    </Appenders>
+    <Loggers>
+        <Root level="trace">
+            <AppenderRef ref="coloso"/>
+        </Root>
+    </Loggers>
+</Configuration>
