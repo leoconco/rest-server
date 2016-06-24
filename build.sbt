@@ -12,12 +12,14 @@ lazy val globalSettings = Seq(
 
 lazy val subprojectSettings = Seq(
   libraryDependencies ++= Seq(
-    "com.typesafe"             % "config"           % "1.3.0",
-    "org.apache.logging.log4j" % "log4j-slf4j-impl" % "2.2",
-    "org.apache.logging.log4j" % "log4j-api"        % "2.2",
-    "org.apache.logging.log4j" % "log4j-core"       % "2.2",
-    "com.google.guava"         % "guava"            % "19.0",
-    "com.twitter.finatra"     %% "finatra-http"     % "2.1.6" exclude("com.google.guava", "guava")
+    "com.typesafe"             % "config"                    % "1.3.0",
+    "org.apache.logging.log4j" % "log4j-slf4j-impl"          % "2.2",
+    "org.apache.logging.log4j" % "log4j-api"                 % "2.2",
+    "org.apache.logging.log4j" % "log4j-core"                % "2.2",
+    "com.google.guava"         % "guava"                     % "19.0",
+    "com.google.oauth-client"  % "google-oauth-client-java6" % "1.22.0",
+    "com.twitter.finatra"     %% "finatra-http"              % "2.1.6"
+      exclude("com.google.guava", "guava")
   ),
   libraryDependencies ++= testLibraries map { _ % Test }
 )
